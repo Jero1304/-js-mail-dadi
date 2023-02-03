@@ -3,25 +3,32 @@
 // Chiedi all’utente la sua email (con il prompt), controlla che sia nella lista di email,
 // stampa un messaggio appropriato sull’esito del controllo.
 
-let emailUtente = prompt('inserisci email:');
-console.log ('email utente: ',emailUtente);
-const emailList = ['gero@bool','sara@bool','ale@bool','stefania@bool','angelo@bool'];
+// let emailUtente = prompt('inserisci email:');
+// console.log ('email utente: ',emailUtente);
+// const emailList = ['gero@bool','sara@bool','ale@bool','stefania@bool','angelo@bool'];
 
-for (let i = 0; i < emailList.length; i++){
+// for (let i = 0; i < emailList.length; i++){
 
-    if(emailList[i] === emailUtente){
-        console.log( 'la tua email', emailUtente, ' è stata trovata ');
-    }
-}
-
-
-
-
-
-
-
+//     if(emailList[i] === emailUtente){
+//         console.log( 'la tua email', emailUtente, ' è stata trovata ');
+//     }
+// }
 
 
 // Gioco dei dadi
-// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
-// Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che “cosa” ci serve?
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. 
+//Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+let utente = Math.round(Math.random() * 6);
+let pc = Math.round(Math.random() * 6);
+console.log('utente:',utente,'pc:',pc)
+
+if(utente > pc){
+    console.log('ha vinto l\'utente con:',utente)
+}else if (pc > utente){
+    console.log('ha vinto il pc con:',pc)
+}else if(utente === pc){
+    console.log('non ha vinto nessuno')
+}
+
+
