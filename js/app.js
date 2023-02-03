@@ -37,22 +37,29 @@ console.log('GIOCO DEI DADI');
 
 const utenteEle = document.getElementById('numero-utente');
 const pcEle = document.getElementById('numero-pc');
+const formBtnDadoEle = document.getElementById('form-btn-dado');
+const dadoMessageEle = document.getElementById('dado-message')
+
 
 const dado = [1,2,3,4,5,6];
 
-formBtnEle.addEventListener('click', function(){
+formBtnDadoEle.addEventListener('click', function(){
 
     let pc = dado [Math.floor(Math.random() * dado.length)];
     let utente = dado[Math.floor(Math.random() * dado.length)];
     console.log('utente:',utente,'pc:',pc);
     
     if(utente > pc){
-        console.log('ha vinto l\'utente con:',utente)
+        message = 'ha vinto l\'utente con: '+ utente;
     }else if (pc > utente){
-        console.log('ha vinto il pc con:',pc)
+        message = 'ha vinto il pc con: '+ pc;
     }else if(utente === pc){
-        console.log('non ha vinto nessuno')
+        message = 'non ha vinto nessuno';
     }
+    console.log(message);
+    utenteEle.innerHTML=utente;
+    pcEle.innerHTML=pc;
+    dadoMessageEle.innerHTML = message;
 })
 
 
