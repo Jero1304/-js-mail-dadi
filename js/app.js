@@ -14,7 +14,7 @@ const emailList = ['gero@bool','sara@bool','ale@bool','stefania@bool','angelo@bo
 formBtnEle.addEventListener('click', function(){
     
     console.log ('email utente:', emailUtenteEle.value);
-    let message = 'la tua main NON è stata trovata';
+    let message = 'la tua email NON è stata trovata';
     
     for (let i = 0; i < emailList.length; i++){    
         if(emailList[i] === emailUtenteEle.value){
